@@ -72,7 +72,7 @@ def get_ganache_wallet():
 @enforce_types
 def get_publisher_ocean_instance(use_provider_mock=False) -> Ocean:
     config = ExampleConfig.get_config()
-    data_provider = DataProviderMock if use_provider_mock else None
+    data_provider = DataProviderMock() if use_provider_mock else None
     ocn = Ocean(config, data_provider=data_provider)
     account = get_publisher_wallet()
     ocn.main_account = account
@@ -82,7 +82,7 @@ def get_publisher_ocean_instance(use_provider_mock=False) -> Ocean:
 @enforce_types
 def get_consumer_ocean_instance(use_provider_mock: bool = False) -> Ocean:
     config = ExampleConfig.get_config()
-    data_provider = DataProviderMock if use_provider_mock else None
+    data_provider = DataProviderMock() if use_provider_mock else None
     ocn = Ocean(config, data_provider=data_provider)
     account = get_consumer_wallet()
     ocn.main_account = account
@@ -92,7 +92,7 @@ def get_consumer_ocean_instance(use_provider_mock: bool = False) -> Ocean:
 @enforce_types
 def get_another_consumer_ocean_instance(use_provider_mock: bool = False) -> Ocean:
     config = ExampleConfig.get_config()
-    data_provider = DataProviderMock if use_provider_mock else None
+    data_provider = DataProviderMock() if use_provider_mock else None
     ocn = Ocean(config, data_provider=data_provider)
     account = get_another_consumer_wallet()
     ocn.main_account = account

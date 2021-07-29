@@ -94,7 +94,7 @@ class Ocean:
         )
 
         if not data_provider:
-            data_provider = DataServiceProvider
+            data_provider = DataServiceProvider()
 
         network = get_network_name(web3=self._web3)
         addresses = get_contracts_addresses(self._config.address_file, network)

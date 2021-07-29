@@ -8,7 +8,7 @@ import copy
 import logging
 import lzma
 import os
-from typing import Optional, Tuple, Type
+from typing import Optional, Tuple
 
 from enforce_typing import enforce_types
 from eth_account.messages import encode_defunct
@@ -60,7 +60,7 @@ class OceanAssets:
         self,
         config: Config,
         web3: Web3,
-        data_provider: Type[DataServiceProvider],
+        data_provider: DataServiceProvider,
         ddo_registry_address: str,
     ) -> None:
         """Initialises OceanAssets object."""

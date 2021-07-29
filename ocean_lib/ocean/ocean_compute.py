@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 import logging
-from typing import Any, Dict, List, Optional, Tuple, Type, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from enforce_typing import enforce_types
 from eth_account.messages import encode_defunct
@@ -30,7 +30,7 @@ class OceanCompute:
     """Ocean assets class."""
 
     def __init__(
-        self, config: Union[Config, Dict], data_provider: Type[DataServiceProvider]
+        self, config: Union[Config, Dict], data_provider: DataServiceProvider
     ) -> None:
         """Initialises OceanCompute class."""
         self._config = config

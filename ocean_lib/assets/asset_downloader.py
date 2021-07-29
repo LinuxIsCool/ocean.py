@@ -5,7 +5,7 @@
 
 import logging
 import os
-from typing import Optional, Type
+from typing import Optional
 
 from enforce_typing import enforce_types
 from ocean_lib.assets.asset import Asset
@@ -25,7 +25,7 @@ def download_asset_files(
     destination: str,
     token_address: str,
     order_tx_id: str,
-    data_provider: Type[DataServiceProvider],
+    data_provider: DataServiceProvider,
     index: Optional[int] = None,
     userdata: Optional[dict] = None,
 ) -> str:
